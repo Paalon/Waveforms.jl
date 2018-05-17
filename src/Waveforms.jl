@@ -2,7 +2,13 @@ __precompile__()
 
 module Waveforms
 
-export squarewave, sawtoothwave, trianglewave
+export
+    squarewave,
+    squarewave1,
+    sawtoothwave,
+    sawtoothwave1,
+    trianglewave,
+    trianglewave1
 
 """
     squarewave(x)
