@@ -21,8 +21,8 @@ squarewave(x::Real) = ifelse(mod2pi(x) < π, 1.0, -1.0)
     squarewave(x, θ)
 
 Compute 2π-periodic square wave of `x`. min = -1, max = +1.
-squarewave(x) = +1.0 for 0 < mod(x, 2π) < θ,
-squarewave(x) = -1.0 for θ < mod(x, 2π) < 2π.
+squarewave(x) = +1.0 for 0   < mod(x, 2π) < 2π0,
+squarewave(x) = -1.0 for 2π0 < mod(x, 2π) < 2π.
 """
 squarewave(x::Real, θ::Real) = ifelse(mod2pi(x) < 2π*θ, 1.0, -1.0)
 
