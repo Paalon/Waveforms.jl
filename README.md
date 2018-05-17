@@ -23,14 +23,10 @@ julia> squarewave(0.4)
 1.0
 
 julia> sawtoothwave(0.4)
-0.1273239544735163
+0.12732395447351627
 
 julia> trianglewave(0.4)
 0.2546479089470326
-```
-
-```julia
-julia> using Waveforms
 
 julia> using UnicodePlots
 
