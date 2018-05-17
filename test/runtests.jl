@@ -5,5 +5,7 @@ else
     using Test
 end
 
-# write your own tests here
-@test 1 == 2
+# test
+@test squarewave(0) == 1.0
+@test squarewave(1π) == 1.0
+@test squarewave(2π) == -1.0
