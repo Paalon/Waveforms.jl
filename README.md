@@ -9,8 +9,8 @@
 Waveform functions library. Following functions are supported:
 
 - square wave
-- triangle wave
 - sawtooth wave
+- triangle wave
 
 ## Installation
 
