@@ -8,6 +8,14 @@
 
 Waveform functions library.
 
+## Installation
+
+```julia
+julia> Pkg.clone("https://github.com/Paalon/Waveforms.jl")
+```
+
+## Usage
+
 ```julia
 julia> using Waveforms
 
