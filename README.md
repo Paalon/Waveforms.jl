@@ -6,7 +6,7 @@
 
 [![codecov.io](http://codecov.io/github/Paalon/Waveforms.jl/coverage.svg?branch=master)](http://codecov.io/github/Paalon/Waveforms.jl?branch=master)
 
-Waveforms functions library.
+Waveform functions library.
 
 ```julia
 julia> using Waveforms
@@ -92,5 +92,4 @@ julia> lineplot([trianglewave, sin], -π/2, 2π)
                                x
 
 
-julia>
 ```
