@@ -6,7 +6,11 @@
 
 [![codecov.io](http://codecov.io/github/Paalon/Waveforms.jl/coverage.svg?branch=master)](http://codecov.io/github/Paalon/Waveforms.jl?branch=master)
 
-Waveform functions library.
+Waveform functions library. Following functions are supported:
+
+- square wave
+- triangle wave
+- sawtooth wave
 
 ## Installation
 
