@@ -14,8 +14,16 @@ Waveform functions library. Following functions are supported:
 
 ## Installation
 
+### `VERSION < v"0.7.0"`
+
 ```julia
 julia> Pkg.clone("https://github.com/Paalon/Waveforms.jl")
+```
+
+### `VERSION >= v"0.7.0"`
+
+```julia
+(v1.0) pkg> add https://github.com/Paalon/Waveforms.jl
 ```
 
 ## Usage
