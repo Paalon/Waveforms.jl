@@ -8,19 +8,17 @@
 
 Waveform functions library. Following functions are supported:
 
-- square wave
-- sawtooth wave
-- triangle wave
+- Square wave
+- Sawtooth wave
+- Triangle wave
+
+| Waveform | 2π-periodic    | 1-periodic      |
+| -------- | -------------- | --------------- |
+| Square   | `squarewave`   | `squarewave1`   |
+| Sawtooth | `sawtoothwave` | `sawtoothwave1` |
+| Triangle | `trianglewave` | `trianglewave1` |
 
 ## Installation
-
-### `VERSION < v"0.7.0"`
-
-```julia
-julia> Pkg.clone("https://github.com/Paalon/Waveforms.jl")
-```
-
-### `VERSION >= v"0.7.0"`
 
 ```julia
 (v1.0) pkg> add https://github.com/Paalon/Waveforms.jl
