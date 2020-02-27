@@ -108,7 +108,7 @@ julia> lineplot([trianglewave, sin], -π/2, 2π)
 [travis-img]: https://travis-ci.org/Paalon/Waveforms.jl.svg?branch=master
 [travis-url]: https://travis-ci.org/Paalon/Waveforms.jl
 
-[appveyor-img]: https://ci.appveyor.com/project/Paalon/waveforms-jl
+[appveyor-img]: https://ci.appveyor.com/api/projects/status/maf07t3et9f4ykfd/branch/master?svg=true
 [appveyor-url]: https://ci.appveyor.com/project/Paalon/waveforms-jl
 
 [coverage-img]: https://coveralls.io/repos/Paalon/Waveforms.jl/badge.svg?branch=master&service=github
