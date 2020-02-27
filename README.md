@@ -12,12 +12,6 @@ Waveform functions library. Following functions are supported:
 - Sawtooth wave
 - Triangle wave
 
-| Waveform | 2π-periodic    | 1-periodic      |
-| -------- | -------------- | --------------- |
-| Square   | `squarewave`   | `squarewave1`   |
-| Sawtooth | `sawtoothwave` | `sawtoothwave1` |
-| Triangle | `trianglewave` | `trianglewave1` |
-
 ## Installation
 
 ```julia
@@ -25,6 +19,12 @@ Waveform functions library. Following functions are supported:
 ```
 
 ## Usage
+
+| Waveform | 2π-periodic    | 1-periodic      |
+| -------- | -------------- | --------------- |
+| Square   | `squarewave`   | `squarewave1`   |
+| Sawtooth | `sawtoothwave` | `sawtoothwave1` |
+| Triangle | `trianglewave` | `trianglewave1` |
 
 ```julia
 julia> using Waveforms
