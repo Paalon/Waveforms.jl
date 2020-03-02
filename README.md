@@ -15,7 +15,7 @@ Waveform functions library. Following functions are supported:
 ## Installation
 
 ```julia
-(v1.0) pkg> add https://github.com/Paalon/Waveforms.jl
+(v1.3) pkg> add Waveforms
 ```
 
 ## Usage
