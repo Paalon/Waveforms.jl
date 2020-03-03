@@ -21,7 +21,7 @@ squarewave(x::Real) = ifelse(mod2pi(x) < π, 1.0, -1.0)
 Compute ``2\pi``-periodic square wave of `x` with a duty cycle `θ`
 and a peak amplitude ``1``.
 """
-squarewave(x::Real, θ::Real) = ifelse(mod2pi(x) < 2π*θ, 1.0, -1.0)
+squarewave(x::Real, θ::Real) = ifelse(mod2pi(x) < 2π * θ, 1.0, -1.0)
 
 @doc raw"""
     squarewave1(x)
@@ -66,13 +66,13 @@ end
 
 Compute ``2\pi``-periodic sawtooth wave of `x` with a peak amplitude ``1``.
 """
-sawtoothwave(x::Real) = rem2pi(x, RoundNearest)/π
+sawtoothwave(x::Real) = rem2pi(x, RoundNearest) / π
 
 @doc raw"""
     sawtoothwave1(x)
 
 Compute ``1``-periodic sawtooth wave of `x` with a peak amplitude ``1``.
 """
-sawtoothwave1(x::Real) = rem(x, 1.0, RoundNearest)*2
+sawtoothwave1(x::Real) = rem(x, 1.0, RoundNearest) * 2
 
 end # module
