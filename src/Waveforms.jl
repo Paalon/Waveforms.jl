@@ -32,6 +32,17 @@ Compute 1-periodic square wave of `x`. min = -1, max = +1.
 squarewave1(x::Real) = ifelse(mod(x, 1) < 1/2, 1.0, -1.0)
 
 """
+    squarewave1(x, θ)
+
+Compute ``1``-periodic square wave of `x` with a duty cycle `θ`
+and a peak amplitude ``1``.
+"""
+function squarewave1(x::Real, θ::Real)
+    0 ≤ θ ≤ 1 || throw(DomainError(θ, "squwarewave1(x, θ) is only defined for 0 ≤ θ ≤ 1."))
+    ifelse(mod(x, 1) < θ, 1.0, -1.0)
+end
+
+"""
     trianglewave(x)
 
 Compute 2π-periodic triangle wave of `x`. min = -1, max = +1.
