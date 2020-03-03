@@ -1,23 +1,46 @@
-using Waveforms
+using Test, Waveforms
 
-using Test
+x = 0.4
+y = 3π/7
+θ = 0.05
 
-# tests
+@testset "square waves" begin
+    @testset "squarewave" begin
+        @test squarewave(x) == 1.0
+        @test squarewave(y) == 1.0
+        @test squarewave(x, θ) == -1.0
+        @test squarewave(y, θ) == -1.0
+        @test_throws DomainError squarewave(x, -1.0)
+        @test_throws DomainError squarewave(x, 2.0)
+    end
+    @testset "squarewave1" begin
+        @test squarewave1(x) == 1.0
+        @test squarewave1(y) == 1.0
+        @test squarewave1(x, θ) == -1.0
+        @test squarewave1(y, θ) == -1.0
+        @test_throws DomainError squarewave1(x, -1.0)
+        @test_throws DomainError squarewave1(x, 2.0)
+    end
+end
 
-@test squarewave(0.4) == 1.0
-@test squarewave1(0.4) == 1.0
-@test sawtoothwave(0.4) == 0.12732395447351627
-@test sawtoothwave1(0.4) == 0.8
-@test trianglewave(0.4) == 0.2546479089470326
-@test trianglewave1(0.4) == 0.3999999999999999
+@testset "triangle waves" begin
+    @testset "trianglewave" begin
+        @test trianglewave(x) == 0.2546479089470326
+        @test trianglewave(y) == 0.8571428571428572
+    end
+    @testset "trianglewave1" begin
+        @test trianglewave1(x) == 0.3999999999999999
+        @test trianglewave1(y) == 0.6144125938460689
+    end
+end
 
-@test squarewave(0.4, 0.05) == -1.0
-
-@test squarewave(3π/7) == 1.0
-@test squarewave1(3π/7) == 1.0
-@test sawtoothwave(3π/7) == 0.42857142857142855
-@test sawtoothwave1(3π/7) == 0.6927937030769655
-@test trianglewave(3π/7) == 0.8571428571428572
-@test trianglewave1(3π/7) == 0.6144125938460689
-
-@test squarewave(3π/7, 0.05) == -1.0
+@testset "sawtooth waves" begin
+    @testset "sawtoothwave" begin
+        @test sawtoothwave(x) == 0.12732395447351627
+        @test sawtoothwave(y) == 0.42857142857142855
+    end
+    @testset "sawtoothwave1" begin
+        @test sawtoothwave1(x) == 0.8
+        @test sawtoothwave1(y) == 0.6927937030769655
+    end
+end
