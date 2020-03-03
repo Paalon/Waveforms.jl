@@ -21,7 +21,10 @@ squarewave(x::Real) = ifelse(mod2pi(x) < π, 1.0, -1.0)
 Compute ``2\pi``-periodic square wave of `x` with a duty cycle `θ`
 and a peak amplitude ``1``.
 """
-squarewave(x::Real, θ::Real) = ifelse(mod2pi(x) < 2π * θ, 1.0, -1.0)
+function squarewave(x::Real, θ::Real)
+    0 ≤ θ ≤ 1 || throw(DomainError(θ, "squwarewave(x, θ) is only defined for 0 ≤ θ ≤ 1."))
+    ifelse(mod2pi(x) < 2π * θ, 1.0, -1.0)
+end
 
 @doc raw"""
     squarewave1(x)
