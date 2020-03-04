@@ -20,6 +20,8 @@ Waveform functions library. Following functions are supported:
 
 ## Usage
 
+See documentations for the detail.
+
 | Waveform | 2π-periodic    | 1-periodic      |
 | -------- | -------------- | --------------- |
 | Square   | `squarewave`   | `squarewave1`   |
