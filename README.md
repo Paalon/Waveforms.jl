@@ -2,9 +2,9 @@
 
 _Waveform functions for Julia._
 
-| Build Status | Code Coverage |
-| ------------ | ------------- |
-| [![Linux and macOS build status][travis-img]][travis-url] [![Windows build status][appveyor-img]][appveyor-url] | [![Coverage Status][coverage-img]][coverage-url] [![Coverage Status][codecov-img]][codecov-url] |
+| Documentations | Build Status | Code Coverage |
+| :------------: | :----------: | :-----------: |
+| [![][docs-stable-img]][docs-stable-url] [![][docs-dev-img]][docs-dev-url] | [![Linux and macOS build status][travis-img]][travis-url] [![Windows build status][appveyor-img]][appveyor-url] | [![Coverage Status][coverage-img]][coverage-url] [![Coverage Status][codecov-img]][codecov-url] |
 
 Waveform functions library. Following functions are supported:
 
@@ -104,6 +104,11 @@ julia> lineplot([trianglewave, sin], -π/2, 2π)
                                x
 
 ```
+
+[docs-stable-img]: https://img.shields.io/badge/docs-stable-blue.svg
+[docs-stable-url]: https://paalon.github.io/Waveforms.jl/stable
+[docs-dev-img]: https://img.shields.io/badge/docs-dev-blue.svg
+[docs-dev-url]: https://paalon.github.io/Waveforms.jl/dev
 
 [travis-img]: https://travis-ci.org/Paalon/Waveforms.jl.svg?branch=master
 [travis-url]: https://travis-ci.org/Paalon/Waveforms.jl
