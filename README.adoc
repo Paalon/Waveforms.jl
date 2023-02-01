@@ -2,33 +2,45 @@
 
 _Waveform functions for Julia._
 
-| Documentations | Build Status | Code Coverage |
-| :------------: | :----------: | :-----------: |
-| [![][docs-stable-img]][docs-stable-url] [![][docs-dev-img]][docs-dev-url] | [![Linux and macOS build status][travis-img]][travis-url] [![Windows build status][appveyor-img]][appveyor-url] | [![Coverage Status][coverage-img]][coverage-url] [![Coverage Status][codecov-img]][codecov-url] |
+[cols="^,^,^,^"]
+|===
+| Documentations | Build Status | Code Coverage | License
+
+| https://paalon.github.io/Waveforms.jl/stable[image:https://img.shields.io/badge/docs-stable-blue.svg[Docs stable]]
+  https://paalon.github.io/Waveforms.jl/dev[image:https://img.shields.io/badge/docs-dev-blue.svg[Docs dev]]
+| https://github.com/Paalon/Waveforms.jl/actions/workflows/ci.yml[image:https://github.com/Paalon/Waveforms.jl/actions/workflows/ci.yml/badge.svg[CI]]
+| https://coveralls.io/github/Paalon/Waveforms.jl?branch=master[image:https://coveralls.io/repos/Paalon/Waveforms.jl/badge.svg?branch=master&service=github[coverage]]
+  https://codecov.io/gh/Paalon/Waveforms.jl[image:https://codecov.io/gh/Paalon/Waveforms.jl/branch/master/graph/badge.svg[codecov]]
+| https://opensource.org/licenses/MIT[image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT]]
+|===
 
 Waveform functions library. Following functions are supported:
 
-- Square wave
-- Sawtooth wave
-- Triangle wave
+* https://en.wikipedia.org/wiki/Square_wave[Square wave]
+* https://en.wikipedia.org/wiki/Sawtooth_wave[Sawtooth wave]
+* https://en.wikipedia.org/wiki/Triangle_wave[Triangle wave]
 
 ## Installation
 
-```julia
-(v1.3) pkg> add Waveforms
-```
+[source, julia]
+----
+(@v1.9) pkg> add Waveforms
+----
 
 ## Usage
 
 See documentations for the detail.
 
-| Waveform | 2π-periodic    | 1-periodic      |
-| -------- | -------------- | --------------- |
-| Square   | `squarewave`   | `squarewave1`   |
-| Sawtooth | `sawtoothwave` | `sawtoothwave1` |
-| Triangle | `trianglewave` | `trianglewave1` |
+|===
+| Waveform | 2π-periodic | 1-periodic
 
-```julia
+| Square | `squarewave` | `squarewave1`
+| Sawthooth | `sawtoothwave` | `sawtoothwave1`
+| Triangle | `trianglewave` | `trianglewave1`
+|===
+
+[source, julia]
+----
 julia> using Waveforms
 
 julia> squarewave(0.4)
@@ -60,8 +72,8 @@ julia> lineplot([squarewave, sin], -π/2, 2π)
            │⠀⠀⠀⠀⡰⠁⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠘⣄⠀⠀⠀⠀⡜⠁⠀⠀⠀⠀⠀⠀│
         -1 │⠀⢀⣀⣜⣀⣀⣀⣀⣸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⣀⣀⣀⣈⣦⣀⣠⣜⣀⣀⣀⣀⣀⠀⠀⠀│
            └────────────────────────────────────────┘
-           -2                                       7
-                               x
+           ⠀-2⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀7⠀
+           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀x⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
 julia> lineplot([sawtoothwave, sin], -π/2, 2π)
            ┌────────────────────────────────────────┐
@@ -81,8 +93,8 @@ julia> lineplot([sawtoothwave, sin], -π/2, 2π)
            │⠀⠀⠀⠀⡰⠁⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⢀⡔⠛⣄⠀⠀⠀⠀⡜⠁⠀⠀⠀⠀⠀⠀│
         -1 │⠀⢀⣀⠜⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡧⠋⠀⠀⠈⢦⣀⣠⠜⠀⠀⠀⠀⠀⠀⠀⠀│
            └────────────────────────────────────────┘
-           -2                                       7
-                               x
+           ⠀-2⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀7⠀
+           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀x⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
 julia> lineplot([trianglewave, sin], -π/2, 2π)
            ┌────────────────────────────────────────┐
@@ -94,32 +106,15 @@ julia> lineplot([trianglewave, sin], -π/2, 2π)
            │⠀⠀⠀⠀⠀⠀⠀⠀⢸⢀⡷⠁⠀⠀⠀⠀⠀⠀⠀⠀⠘⣵⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀│
            │⠀⠀⠀⠀⠀⠀⠀⠀⢸⡼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀│
    f(x)    │⠤⠤⠤⠤⠤⠤⠤⠤⢼⠧⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠼⡤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⣤⠤⠤⠤│
-           │⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠇⠀⠀⠀│
+           │⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠇⠀⠀⠀│
            │⠀⠀⠀⠀⠀⠀⢠⡻⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡷⡀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡻⠀⠀⠀⠀│
            │⠀⠀⠀⠀⠀⢠⢊⠇⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⢣⡀⠀⠀⠀⠀⠀⠀⢠⢣⠃⠀⠀⠀⠀│
            │⠀⠀⠀⠀⢀⠎⡞⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⢣⠀⠀⠀⠀⠀⢠⠎⡎⠀⠀⠀⠀⠀│
-           │⠀⠀⠀⢀⠎⡸⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⢣⠀⠀⠀⢀⠇⡸⠀⠀⠀⠀⠀⠀│
+           │⠀⠀⠀⢀⠎⡸⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⢳⠀⠀⠀⢀⠇⡸⠀⠀⠀⠀⠀⠀│
            │⠀⠀⠀⡎⡰⠁⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣄⢣⠀⢀⠎⡜⠁⠀⠀⠀⠀⠀⠀│
         -1 │⠀⢀⣎⠜⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢮⣦⣮⠜⠀⠀⠀⠀⠀⠀⠀⠀│
            └────────────────────────────────────────┘
-           -2                                       7
-                               x
+           ⠀-2⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀7⠀
+           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀x⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-```
-
-[docs-stable-img]: https://img.shields.io/badge/docs-stable-blue.svg
-[docs-stable-url]: https://paalon.github.io/Waveforms.jl/stable
-[docs-dev-img]: https://img.shields.io/badge/docs-dev-blue.svg
-[docs-dev-url]: https://paalon.github.io/Waveforms.jl/dev
-
-[travis-img]: https://travis-ci.org/Paalon/Waveforms.jl.svg?branch=master
-[travis-url]: https://travis-ci.org/Paalon/Waveforms.jl
-
-[appveyor-img]: https://ci.appveyor.com/api/projects/status/maf07t3et9f4ykfd/branch/master?svg=true
-[appveyor-url]: https://ci.appveyor.com/project/Paalon/waveforms-jl
-
-[coverage-img]: https://coveralls.io/repos/Paalon/Waveforms.jl/badge.svg?branch=master&service=github
-[coverage-url]: https://coveralls.io/github/Paalon/Waveforms.jl?branch=master
-
-[codecov-img]: https://codecov.io/gh/Paalon/Waveforms.jl/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/Paalon/Waveforms.jl
+----
