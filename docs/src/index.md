@@ -1,4 +1,10 @@
-# Reference
+# Waveforms.jl
+
+This package implements waveform functions:
+
+* Square waves
+* Triangle waves
+* Sawtooth waves
 
 ```@meta
 CurrentModule = Waveforms
