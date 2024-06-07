@@ -1,6 +1,6 @@
 name = "Waveforms"
 uuid = "cb13b1c6-351e-5134-b3ad-d6a530956a82"
-version = "0.1.1"
+version = "0.1.2"
 
 [compat]
 julia = "1"
