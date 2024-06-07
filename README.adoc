@@ -8,7 +8,7 @@ _Waveform functions for Julia._
 
 | https://paalon.github.io/Waveforms.jl/stable/[image:https://img.shields.io/badge/docs-stable-blue.svg[Docs stable]]
   https://paalon.github.io/Waveforms.jl/dev/[image:https://img.shields.io/badge/docs-dev-blue.svg[Docs dev]]
-| https://github.com/Paalon/Waveforms.jl/actions/workflows/ci.yml[image:https://github.com/Paalon/Waveforms.jl/actions/workflows/ci.yml/badge.svg[CI]]
+| https://github.com/Paalon/Waveforms.jl/actions/workflows/CI.yaml[image:https://github.com/Paalon/Waveforms.jl/actions/workflows/CI.yaml/badge.svg[CI]]
 | https://coveralls.io/github/Paalon/Waveforms.jl?branch=master[image:https://coveralls.io/repos/Paalon/Waveforms.jl/badge.svg?branch=master&service=github[coverage]]
   https://codecov.io/gh/Paalon/Waveforms.jl[image:https://codecov.io/gh/Paalon/Waveforms.jl/branch/master/graph/badge.svg[codecov]]
 | https://opensource.org/licenses/MIT[image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT]]
