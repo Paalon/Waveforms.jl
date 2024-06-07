@@ -6,8 +6,8 @@ _Waveform functions for Julia._
 |===
 | Documentations | Build Status | Code Coverage | License
 
-| https://paalon.github.io/Waveforms.jl/stable[image:https://img.shields.io/badge/docs-stable-blue.svg[Docs stable]]
-  https://paalon.github.io/Waveforms.jl/dev[image:https://img.shields.io/badge/docs-dev-blue.svg[Docs dev]]
+| https://paalon.github.io/Waveforms.jl/stable/[image:https://img.shields.io/badge/docs-stable-blue.svg[Docs stable]]
+  https://paalon.github.io/Waveforms.jl/dev/[image:https://img.shields.io/badge/docs-dev-blue.svg[Docs dev]]
 | https://github.com/Paalon/Waveforms.jl/actions/workflows/ci.yml[image:https://github.com/Paalon/Waveforms.jl/actions/workflows/ci.yml/badge.svg[CI]]
 | https://coveralls.io/github/Paalon/Waveforms.jl?branch=master[image:https://coveralls.io/repos/Paalon/Waveforms.jl/badge.svg?branch=master&service=github[coverage]]
   https://codecov.io/gh/Paalon/Waveforms.jl[image:https://codecov.io/gh/Paalon/Waveforms.jl/branch/master/graph/badge.svg[codecov]]
@@ -29,14 +29,14 @@ Waveform functions library. Following functions are supported:
 
 ## Usage
 
-See documentations for the detail.
+See https://paalon.github.io/Waveforms.jl/stable/[documentations] for the detail.
 
 |===
 | Waveform | 2π-periodic | 1-periodic
 
-| Square | `squarewave` | `squarewave1`
-| Sawthooth | `sawtoothwave` | `sawtoothwave1`
-| Triangle | `trianglewave` | `trianglewave1`
+| Square | https://paalon.github.io/Waveforms.jl/stable/#Waveforms.squarewave[`squarewave`] | https://paalon.github.io/Waveforms.jl/stable/#Waveforms.squarewave1[`squarewave1`]
+| Sawthooth | https://paalon.github.io/Waveforms.jl/stable/#Waveforms.sawtoothwave[`sawtoothwave`] | https://paalon.github.io/Waveforms.jl/stable/#Waveforms.trianglewave1[`sawtoothwave1`]
+| Triangle | https://paalon.github.io/Waveforms.jl/stable/#Waveforms.trianglewave[`trianglewave`] | https://paalon.github.io/Waveforms.jl/stable/#Waveforms.trianglewave1[`trianglewave1`]
 |===
 
 [source, julia]
