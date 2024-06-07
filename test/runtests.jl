@@ -1,8 +1,8 @@
 using Test, Waveforms
 
-x = 0.4
-y = 3π/7
-θ = 0.05
+const x = 0.4
+const y = 3π/7
+const θ = 0.05
 
 @testset "square waves" begin
     @testset "squarewave" begin
